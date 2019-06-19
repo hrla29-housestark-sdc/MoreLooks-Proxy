@@ -1,6 +1,6 @@
 const express = require('express');
 const proxy = require('http-proxy-middleware');
-const morgan = require('morgan');
+// const morgan = require('morgan');
 const bodyParser = require('body-parser');
 const path = require('path');
 
@@ -9,7 +9,7 @@ const app = express();
 const port = 3000;
 
 // Middleware
-app.use(morgan('dev'));
+// app.use(morgan('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
@@ -20,10 +20,10 @@ app.use(express.static(path.join(__dirname, '../client')));
 app.use('/', proxy({
   target: 'localhost:3000',
   router: {
-    '/navbar': 'http://localhost:3001',
-    '/productDescription': 'http://localhost:3002',
-    '/morelooks': 'http://localhost:3003',
-    '/reviews': 'http://localhost:3004'
+    '/navbar': 'http://ec2-54-183-221-30.us-west-1.compute.amazonaws.com',
+    '/productDescription': 'http://ec2-18-188-70-40.us-east-2.compute.amazonaws.com',
+    '/morelooks': 'http://ec2-18-191-169-48.us-east-2.compute.amazonaws.com',
+    '/reviews': 'http://ec2-18-191-154-4.us-east-2.compute.amazonaws.com'
   }
 }))
 

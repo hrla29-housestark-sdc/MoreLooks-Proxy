@@ -1,1 +1,1 @@
-# Nordstrom-Matthew-proxy
+# MoreLooks-Proxy

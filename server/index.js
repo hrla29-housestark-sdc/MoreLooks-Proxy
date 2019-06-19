@@ -23,7 +23,7 @@ app.use('/', proxy({
     '/navbar': 'http://ec2-54-153-22-73.us-west-1.compute.amazonaws.com/navbar/mongo/search/9000000',
     '/productDescription': 'http://ec2-18-188-70-40.us-east-2.compute.amazonaws.com',
     '/morelooks': 'http://ec2-18-191-169-48.us-east-2.compute.amazonaws.com/morelooks/api',
-    '/reviews': 'http://ec2-18-191-154-4.us-east-2.compute.amazonaws.com/api/reviews'
+    '/reviews': 'http://ec2-18-191-154-4.us-east-2.compute.amazonaws.com'
   }
 }))
 

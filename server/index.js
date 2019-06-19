@@ -18,7 +18,7 @@ app.use(express.static(path.join(__dirname, '../client')));
 
 // Proxy router to handle all routes
 app.use('/', proxy({
-  target: 'localhost:3000',
+  target: 'ec2-3-14-5-216.us-east-2.compute.amazonaws.com',
   router: {
     '/navbar': 'http://ec2-54-153-22-73.us-west-1.compute.amazonaws.com/',
     '/productDescription': 'http://ec2-18-188-70-40.us-east-2.compute.amazonaws.com',
